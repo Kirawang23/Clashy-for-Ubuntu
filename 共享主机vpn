@@ -1,0 +1,14 @@
+VMWARE下Ubuntu主机共享vpn
+
+一共三个步骤：
+step1：打开局域网记下代理端口
+step2：记下VMnet8的IPv4
+step3：填入ubuntu的network proxy
+
+step1.在主机windows下打开clashy for windows，打开局域网代理，记下代理端口7890（代理端口显示为1个时，为mixed proxy，将http和socks混在一起了）
+
+step2.找到VMnet8的IPv4地址：
+我的电脑——网络（右键属性）——（左边）更改适配器设置——双击VMnet8——详细信息——IPv4地址
+
+step3.打开ubuntu——settings——network proxy——manual
+第一列填VMnet8的IPv4地址，第二列前三行填http proxy（又叫proxy）端口，socks host填写单独的socks端口（因为我这里clashy使用的混合端口，不区分http和socks，所以写一个7890就行了），删掉最后一行ignore host的地址 
