@@ -1,0 +1,17 @@
+1.主机IP变换后，宿主机共享vpn失败（桥接、NAT均失败，查询两天没找到原因）
+2.放弃共享vpn，在vmware下载clashy
+3.地址：GIthub：https://github.com/SpongeNobody/Clashy/releases
+4.Ubuntu 可以下载 Clashy-版本号.deb
+5.解压： dpkg Clashy_0.2.2_amd64.deb
+6.运行 clashy （右上角出现小猫咪）
+7.点开小猫咪进行设置：profiles：添加订阅地址并save
+                    settings：Rule-其余按钮全部点关闭（最后一个可以开）
+                    记住Status中HTTP Port 和Socks Port代理端口
+8.Ubuntu Network proxy设置：Manual    
+  HTTP Proxy：127.0.0.1 （HTTP Port）
+  HTTPS Proxy与HTTP Proxy设置相同
+  FTP不填
+  Socks Host：127.0.0.1 （Socks Port）
+  Ignore Hosts：localhost, 127.0.0.0/8, ::1
+
+OVER！！
